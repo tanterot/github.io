@@ -9,6 +9,8 @@
     <!-- Подключение Animate.css для анимации -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Подключение jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         .animated-icon {
             animation-duration: 3s;
@@ -50,6 +52,15 @@
         footer {
             background-color: #007BFF;
         }
+        /* Добавлено: стили для кнопки "Вернуться наверх" */
+        .scroll-to-top {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -86,7 +97,8 @@
             <li><i class="fas fa-wrench"></i> Техническое обслуживание</li> <!-- Добавлены иконки -->
             <li><i class="fas fa-laptop-code"></i> Компьютерная диагностика</li>
             <li><i class="fas fa-paint-roller"></i> Малярные работы</li>
-            <li><i class="fas fa-car"></i> Подбор авто</li>
+            <li><i class="fas fa-car"></i> Подбор авто</li> <!-- Добавлена новая услуга -->
+            <li><i class="fas fa-cogs"></i> <a href="http://www.bamper.by" target="_blank">Заказ запчастей</a></li>
         </ul>
     </section>
     <section id="gallery">
@@ -123,9 +135,23 @@
 </main>
 <footer class="bg-dark text-white text-center p-3">
     <p>© 2024 Автосервис в Гомеле</p>
+    <a href="#home" class="scroll-to-top">Вернуться наверх</a> <!-- Добавлено: ссылка для возврата наверх -->
 </footer>
 <!-- Подключение Bootstrap JS и jQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-</html>
+<!-- Добавлено: скрипт для плавного скролла -->
+<script>
+    $(document).ready(function(){
+        $('.scroll-to-top').click(function(e){
+            e.preventDefault();
+            $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500);
+        });
+        /* Добавлено: скрипт для цикличного скролла галереи */
+        var scrollAmount = 0;
+        function slideImages() {
+            var $imageContainer = $('.image-container');
+            var $firstImage = $('img:first-child', $imageContainer);
+            scrollAmount += $firstImage.outerWidth();
+            $imageContainer.animate({scrollLeft: scrollAmount}, 500, function() {
+                if (scrollAmount >= $

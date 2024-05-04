@@ -8,11 +8,20 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Подключение Animate.css для анимации -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
         .animated-icon {
             animation-duration: 3s;
             animation-delay: 2s;
             animation-iteration-count: infinite;
+        }
+        .image-container {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+        .image-container img {
+            margin-right: 20px;
         }
     </style>
 </head>
@@ -27,8 +36,6 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#home">Главная <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#services">Услуги</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#contacts">Контакты</a>
@@ -37,7 +44,7 @@
     </div>
 </nav>
 <header class="bg-info text-white text-center p-5" id="home">
-    <h1>Добро пожаловать в наш автосервис!</h1>
+    <h1>Добро пожаловать в наш автосервис - у Валентина!</h1>
     <p>Мы предлагаем широкий спектр услуг для вашего автомобиля.</p>
 </header>
 <main class="container py-5">
@@ -49,6 +56,16 @@
             <li>Малярные работы</li>
         </ul>
     </section>
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <div class="image-container">
+            <!-- Здесь будут изображения -->
+            <img src="https://avatars.mds.yandex.net/i?id=612f97498f8c927d46a90d41745414fe5f1e2f21-12421823-images-thumbs&n=13" alt="Image 1">
+            <img src="https://avatars.mds.yandex.net/i?id=80c44a9ecafb90e5cc536454b872f144be561f9f-10351804-images-thumbs&n=13" alt="Image 2">
+            <img src="https://avatars.mds.yandex.net/i?id=4f2de129b4690a77ed94f177f7a005b4df003a4c-12542812-images-thumbs&n=13" alt="Image 3">
+            <img src="https://avatars.mds.yandex.net/i?id=97bbcc0da742787cae898359252f072037e3fa9d-2816701-images-thumbs&n=13" alt="Image 4">
+        </div>
+    </section>
     <section id="contacts">
         <h2>Наши адреса</h2>
         <ul>
@@ -56,8 +73,8 @@
             <li>Волотова, Гомель</li>
         </ul>
         <h2>Свяжитесь с нами</h2>
-        <p>Телефон: <a href="tel:+375445513152">+375(44)551-31-52</a></p>
-        <p>Telegram: <a href="https://t.me/+375445513152">+375(44)551-31-52</a></p>
+        <p><i class="fas fa-phone"></i> Телефон: <a href="tel:+375445513152">+375(44)551-31-52</a></p>
+        <p><i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/+375445513152">+375(44)551-31-52</a></p>
     </section>
     <section id="about">
         <h2>О нас</h2>
@@ -72,4 +89,3 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
-

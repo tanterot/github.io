@@ -16,15 +16,36 @@
             animation-delay: 2s;
             animation-iteration-count: infinite;
         }
+
+
         .image-container {
             display: flex;
             overflow-x: auto;
             padding: 20px 0;
         }
-        .image-container img {
+        .image-caption {
+            position: relative;
+            display: inline-block;
             margin-right: 20px;
+        }
+
+        .image-caption p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 0 0 10px 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .image-caption img {
+            display: block;
             border-radius: 10px;
         }
+
         .contact-item {
             display: inline-block;
             margin-right: 20px;
@@ -41,7 +62,7 @@
             padding: 10px 0;
             font-size: 18px;
         }
-        
+
         footer {
             background-color: #007BFF;
         }
@@ -96,11 +117,22 @@
     <section id="gallery">
         <h2>Галерея</h2>
         <div class="image-container">
-            <img src="https://avatars.mds.yandex.net/i?id=612f97498f8c927d46a90d41745414fe5f1e2f21-12421823-images-thumbs&n=13" alt="Image 1">
-            <img src="https://avatars.mds.yandex.net/i?id=80c44a9ecafb90e5cc536454b872f144be561f9f-10351804-images-thumbs&n=13" alt="Image 2">
-            <img src="https://avatars.mds.yandex.net/i?id=4f2de129b4690a77ed94f177f7a005b4df003a4c-12542812-images-thumbs&n=13" alt="Image 3">
-            <img src="https://avatars.mds.yandex.net/i?id=97bbcc0da742787cae898359252f072037e3fa9d-2816701-images-thumbs&n=13" alt="Image 4">
-
+            <div class="image-caption">
+                <img src="https://avatars.mds.yandex.net/i?id=97bbcc0da742787cae898359252f072037e3fa9d-2816701-images-thumbs&n=13" alt="Image 4">
+                <p>Диагностика бесплатно с учетом дальнейшего ремонта в нашем автосервисе</p>
+            </div>
+            <div class="image-caption">
+                <img src="https://avatars.mds.yandex.net/i?id=612f97498f8c927d46a90d41745414fe5f1e2f21-12421823-images-thumbs&n=13" alt="Image 1">
+                <p>Скидка на полный перекрас 30%, на перекрас элементов 15%</p>
+            </div>
+            <div class="image-caption">
+                <img src="https://avatars.mds.yandex.net/i?id=80c44a9ecafb90e5cc536454b872f144be561f9f-10351804-images-thumbs&n=13" alt="Image 2">
+                <p>ТО автомобиля в мае 10% скидка</p>
+            </div>
+            <div class="image-caption">
+                <img src="https://avatars.mds.yandex.net/i?id=c9b72e81d9c860e808f8cc0d8b6cb9ac7fd751d8-12384307-images-thumbs&n=13" alt="Image 3">
+                <p>Ремонт любой сложности в кротчайшие сроки</p>
+            </div>
         </div>
     </section>
     <section id="contacts">
